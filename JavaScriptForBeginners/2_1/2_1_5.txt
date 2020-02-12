@@ -1,0 +1,7 @@
+Вопрос:
+Отметьте все варианты корректного определения функции
+
+Ответ:
+function Function(a) { document.write(a); };
+function myFunction() { };
+var myFunction = function(a) {document.write(a); } ;
