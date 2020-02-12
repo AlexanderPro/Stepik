@@ -1,4 +1,4 @@
-### Solutions for courses at [stepik.org](https://stepik.org)
+# Solutions for courses at [stepik.org](https://stepik.org)
 
 * **Компьютерная графика: основы**
 * **Программирование на языке C++**
