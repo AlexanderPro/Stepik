@@ -1,0 +1,10 @@
+Вопрос:
+Сопоставьте цветовые пространства.
+
+Ответ:
+1 - RGB (Adobe RGB color space)
+2 - CMYK (печатные машины)
+3 - CMYK (дешевые принтеры)
+4 - RGB (sRGB color space)
+5 - Lab color space
+Нет на рисунке - Pro Photo RGB color space
