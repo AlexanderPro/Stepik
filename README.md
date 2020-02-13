@@ -1,5 +1,6 @@
 # Solutions for courses at [stepik.org](https://stepik.org)
 
+* **Введение в Linux**
 * **Компьютерная графика: основы**
 * **Программирование на языке C++**
 * **Java. Базовый курс**
