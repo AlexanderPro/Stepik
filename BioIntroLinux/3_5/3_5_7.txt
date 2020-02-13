@@ -1,0 +1,11 @@
+Вопрос:
+Задание на понимание работы опций -A, -B и -C команды grep. Пусть у вас есть файл file.txt из 10 строк, причем в каждой строке есть слово "word". Если вы выполните на этом файле команды:
+
+grep "word" file.txt > results.txt
+grep -A 1 "word" file.txt > results.txt
+grep -B 1 "word" file.txt > results.txt
+grep -C 1 "word" file.txt > results.txt
+то какая(ие) из них создаст файл results.txt наибольшего размера?
+
+Ответ:
+results.txt будет одинакового размера во всех случаях

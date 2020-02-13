@@ -1,0 +1,7 @@
+Вопрос:
+Предположим, что в файле  text.txt записаны строки, показанные среди вариантов ответа. Отметьте только те из них, которые выведет на экран команда  grep -E "[xklXKL]?[uU]buntu$" text.txt.
+
+Ответ:
+Hmm, XKLubuntu
+I prefer Kubuntu
+The best OS is Xubuntu

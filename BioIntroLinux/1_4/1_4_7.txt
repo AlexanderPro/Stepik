@@ -1,0 +1,6 @@
+Вопрос:
+Укажите, какие из следующих команд полностью эквивалентны команде ls -A --human-readable -l /some/directory
+
+Ответ:
+ls -Ahl /some/directory
+ls -lAh /some/directory

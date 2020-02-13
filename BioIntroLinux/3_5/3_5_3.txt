@@ -1,0 +1,8 @@
+Вопрос:
+Пусть в директории /home/bi лежат файлы Star_Wars.avi, star_trek_OST.mp3, STARS.txt, stardust.mpeg, Eddard_Stark_biography.txt.
+
+Отметьте все файлы, которые найдет команда find /home/bi -iname "star*", но НЕ найдет команда find /home/bi -name "star*"?
+
+Ответ:
+STARS.txt
+Star_Wars.avi

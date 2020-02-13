@@ -1,0 +1,9 @@
+Вопрос:
+Предположим, что в файле  text.txt записаны строки, показанные среди вариантов ответа. Отметьте только те из них, которые выведет на экран команда  grep "world" text.txt.
+
+Ответ:
+world
+The "world" is not enough
+The beautifulworld is not enough
+The world is not enough
+The beautiful-world is not enough
