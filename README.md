@@ -1,9 +1,9 @@
 # Solutions for courses at [stepik.org](https://stepik.org)
 
-* **Введение в Linux**
-* **Компьютерная графика: основы**
-* **Программирование на языке C++**
-* **Введение в архитектуру ЭВМ. Элементы операционных систем.**
-* **Java. Базовый курс**
-* **Введение в JavaScript**
-* **Введение в программирование (С++)**
+* **[Введение в Linux](https://stepik.org/course/73)**
+* **[Компьютерная графика: основы](https://stepik.org/course/419)**
+* **[Программирование на языке C++](https://stepik.org/course/7)**
+* **[Введение в архитектуру ЭВМ. Элементы операционных систем.](https://stepik.org/course/253)**
+* **[Java. Базовый курс](https://stepik.org/course/187)**
+* **[Введение в JavaScript](https://stepik.org/course/2223)**
+* **[Введение в программирование (С++)](https://stepik.org/course/363)**
