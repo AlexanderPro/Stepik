@@ -1,0 +1,13 @@
+Вопрос:
+Перед вами список перехваченных заголовков, устанавливающих cookies-значения при общении с сайтом google.com:
+
+1) Set-Cookie: PREF=ID=1111111111111111:FF=0:NW=1:TM=1444600691:LM=1444600691:V=1:S=KpEjpwFIA1qtPC2I; expires=Thu, 12-Dec-2015 16:02:17 GMT; path=/; domain=.google.com
+
+2) Set-Cookie: NID=72=4bCo1MppslFFsxyhCyobWec6cjdiDlpV4pfsKcKZy2p1IH4admFuJX-M2ztXUFgzKEl9dRL8fBOURrgKYiufUVXy1e2rSaJwYNizP331ghqJCPVOVQWylZgq8f0Wa2H1; expires=Mon, 18-Mar-2016 21:58:11 GMT; path=/; domain=.google.com; HttpOnly
+
+3) Set-Cookie: GAPS=1:AjiNn1Ven9_GrDSUYgBYpXZqj4hlUA:eyoj6PyQ8nVM9oQG;Path=/;domain=.google.com;﻿Expires=Tue, 22-Nov-2016 22:00:03 GMT;Secure;Priority=HIGH
+
+К каким из этих значений можно обратиться посредством js, при условии, что код js был загружен с домена http://docs.google.com?
+
+Ответ:
+номер 1

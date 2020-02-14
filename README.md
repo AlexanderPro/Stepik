@@ -6,4 +6,5 @@
 * **[Введение в архитектуру ЭВМ. Элементы операционных систем.](https://stepik.org/course/253)**
 * **[Java. Базовый курс](https://stepik.org/course/187)**
 * **[Введение в JavaScript](https://stepik.org/course/2223)**
+* **[Анализ безопасности веб-проектов](https://stepik.org/course/127)**
 * **[Введение в программирование (С++)](https://stepik.org/course/363)**

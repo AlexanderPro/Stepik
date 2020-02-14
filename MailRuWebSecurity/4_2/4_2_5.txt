@@ -1,0 +1,10 @@
+Вопрос:
+Давайте рассмотрим следующий url:
+
+https://beta.target.com/img?id=1
+
+Данные с каких url будут считаться пришедшими из одного источника, исходя из Same-origin policy? 
+
+Ответ:
+https://beta.target.com/urlmapper/w2/x?guest=1
+https://beta.target.com/login
