@@ -1,0 +1,17 @@
+Вопрос:
+
+interface A { }
+interface B : A { }
+
+class X : A {}
+class Y : X, B {}
+class Z : X {}
+
+Какие из этих следующих операторов не выбросят исключение?
+
+
+Ответ:
+(A) X
+(A) Y
+Y as B
+X as B

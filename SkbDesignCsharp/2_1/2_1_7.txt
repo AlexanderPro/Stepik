@@ -1,0 +1,22 @@
+Вопрос:
+
+namespace MyNamespace
+{
+    internal class ClassA { }
+    
+    public class ClassB
+    {
+        public ClassA Method1() { return null; }
+        private ClassB Method2() { return null; }
+    }
+}
+
+Перечислите все способы, которыми можно избавиться от ошибок компиляции в этом коде
+
+
+
+Ответ:
+Сменить модификатор доступа Method1 с public на internal
+Сменить модификатор доступа ClassA с internal на public
+Сменить модификатор доступа Method1 с public на private
+Сменить модификатор доступа ClassB с public на internal

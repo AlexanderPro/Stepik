@@ -1,0 +1,14 @@
+Вопрос:
+
+class SomeClass {
+  public static int s;
+  private int p;
+  public int d;
+}
+
+Отметьте все корректные обращения к полям объявленного выше класса SomeClass
+
+
+Ответ:
+SomeClass.s = 42
+new SomeClass().d = 42

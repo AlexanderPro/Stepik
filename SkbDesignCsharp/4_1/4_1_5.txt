@@ -1,0 +1,26 @@
+Вопрос:
+
+Изучите следующий код:
+
+class ClassA { }
+
+class ClassB : ClassA { }
+
+class ClassC : ClassA { }
+
+class Program 
+{
+	public static void Main()
+	{
+		ClassA a = new ClassA();
+		ClassB b = new ClassB();
+		ClassC c = new ClassC();
+		ClassA d = (ClassA) b;
+	}
+}
+
+Конверсия переменной c к ClassA...
+
+
+Ответ:
+Пройдет без ошибок
