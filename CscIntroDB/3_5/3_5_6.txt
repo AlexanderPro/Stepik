@@ -1,0 +1,9 @@
+create table if not exists best_offer_sale (
+id int not null,
+name varchar(255) null,
+dt_start datetime not null,
+dt_finish datetime not null,
+primary key (id))
+engine = InnoDB
+default character set = utf8
+collate = utf8_general_ci;

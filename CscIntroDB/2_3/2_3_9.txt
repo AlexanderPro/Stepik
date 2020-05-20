@@ -1,0 +1,4 @@
+select s.name as source_name, sum(sl.sale_sum) as sale_sum from source as s 
+left outer join client as c on s.id = c.source_id
+left outer join sale as sl on sl.client_id = c.id
+group by s.name

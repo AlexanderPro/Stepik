@@ -1,0 +1,3 @@
+alter table client
+add column source_id int null,
+add constraint fk_source_id foreign key (source_id) references source(id);

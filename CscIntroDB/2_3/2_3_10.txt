@@ -1,0 +1,10 @@
+select g.name as good_name from good as g 
+inner join category_has_good as cg on g.id = cg.good_id
+inner join category as c on c.id = cg.category_id
+where c.name = 'Cakes'
+union
+select g.name as good_name from good as g 
+inner join sale_has_good as sg on g.id = sg.good_id
+inner join sale as s on s.id = sg.sale_id
+inner join status as st on st.id = s.status_id
+where st.name = 'delivering'

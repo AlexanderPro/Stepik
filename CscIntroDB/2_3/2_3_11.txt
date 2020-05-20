@@ -1,0 +1,6 @@
+select c.name as name, count(s.id) as sale_sum from category as c
+left join category_has_good as cg on c.id = cg.category_id
+left join good as g on cg.good_id = g.id
+left join sale_has_good as sg on sg.good_id = g.id
+left join sale as s on s.id = sg.sale_id
+group by c.name

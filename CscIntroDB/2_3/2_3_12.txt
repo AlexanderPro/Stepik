@@ -1,0 +1,13 @@
+select s.name as source_name from source as s
+where not exists (select * from client as c where c.source_id = s.id)
+union
+select s.name as source_name from source as s
+where not exists (select * from client as c 
+inner join sale as sl on sl.client_id = c.id
+where c.source_id = s.id)
+union
+select s.name as source_name from source as s
+inner join client as c on c.source_id = s.id
+inner join sale as sl on sl.client_id = c.id
+inner join status as st on st.id = sl.status_id
+where st.name = 'rejected'

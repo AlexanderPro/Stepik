@@ -1,0 +1,5 @@
+select c.first_name, c.last_name, count(*) as new_sale_num from client as c
+inner join sale as s on c.id = s.client_id
+inner join status as st on st.id = s.status_id
+where st.name = 'new'
+group by c.first_name, c.last_name

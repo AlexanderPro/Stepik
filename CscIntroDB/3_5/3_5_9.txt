@@ -1,0 +1,4 @@
+alter table client 
+drop column code,
+drop foreign key fk_client_source1,
+drop column source_id;

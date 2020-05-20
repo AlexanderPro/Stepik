@@ -1,0 +1,3 @@
+alter table sale_has_good
+add column num int not null,
+add column price decimal(18,2) not null;

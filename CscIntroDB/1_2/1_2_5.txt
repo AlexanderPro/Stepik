@@ -1,0 +1,1 @@
+select * from billing where payer_email = 'vasya@mail.com'

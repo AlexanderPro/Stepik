@@ -1,0 +1,1 @@
+select category, count(*) from store group by category

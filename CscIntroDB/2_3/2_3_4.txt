@@ -1,0 +1,4 @@
+select g.name as good_name, c.name as category_name from good as g 
+inner join category_has_good as cg on g.id = cg.good_id
+inner join category as c on c.id = cg.category_id
+order by good_name, category_name
