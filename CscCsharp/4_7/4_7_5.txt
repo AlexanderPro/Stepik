@@ -1,0 +1,29 @@
+Вопрос:
+
+Можно ли воспользоваться первым советом урока и удалить оператор await из этого кода:
+
+using System;
+using System.IO;
+using System.Reflection;
+using System.Threading.Tasks;
+
+static class Program
+{
+    static async Task<int> Perform()
+    {
+        var thisAssemblyFilePath = new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path;
+
+        using (var assembly = new FileStream(thisAssemblyFilePath, FileMode.Open, FileAccess.Read))
+        {
+            return await assembly.ReadAsync(new byte[assembly.Length]);
+        }
+    }
+
+    static void Main()
+    {
+        Perform().Wait();
+    }
+}
+
+Ответ:
+Нет.

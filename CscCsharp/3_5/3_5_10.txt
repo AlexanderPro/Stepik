@@ -1,0 +1,13 @@
+Вопрос:
+Напишите функцию Even, возвращающую последовательность чётных неотрицательных чисел типа long. Давайте считать ноль чётным. Переполнение тоже можно не обрабатывать.
+
+Ответ:
+private static System.Collections.Generic.IEnumerable<long> Even()
+{
+ long i = 0;
+ while (true)
+ {
+  yield return i;
+  i += 2;
+ }
+}

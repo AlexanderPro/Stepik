@@ -1,0 +1,7 @@
+Вопрос:
+
+В каких случаях создастся объект в динамической памяти (heap)? (MyClass – class, MyStruct - struct)
+
+Ответ:
+
+MyClass obj = new MyClass();

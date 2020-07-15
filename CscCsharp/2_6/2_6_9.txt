@@ -1,0 +1,28 @@
+Вопрос:
+Реализуйте событие без аргументов c типом System.Action и именем OnEvent так, что б на добавление в него нового делегата в консоль выводилось «add!» (без кавычек), а на удаление «remove!» (тоже без кавычек). Для вывода в консоль используйте System.Console.Write.
+Подсказка: вам могут пригодиться функции Delegate.Combine и Delegate.Remove.
+
+Ответ:
+private Action _onEvent;
+
+public event Action OnEvent
+{
+ add
+ {
+  System.Console.Write("add!");
+  _onEvent += value;
+ }
+ remove
+ {
+  System.Console.Write("remove!");
+  _onEvent -= value; 
+ }
+}
+
+internal void FireEvent()
+{
+ if (_onEvent != null) 
+ {
+  _onEvent.Invoke();
+ }
+}

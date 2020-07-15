@@ -1,0 +1,31 @@
+Вопрос:
+
+Напишите статическую функцию Display, перебирающую и печатающую в консоль (System.Console.Write) не более десяти элементов, переданной ей последовательности (Object.ToString). Оператор foreach и функции LINQ, хоть мы до них ещё не дошли, использовать нельзя.
+
+Sample Input 1:
+this- is- test- itput
+
+Sample Output 1:
+this-is-test-itput
+
+Sample Input 2:
+2 3 5 7 11 13 17 19 23 29 31 37 41 43
+
+Sample Output 2:
+2357111317192329
+
+Ответ:
+private static void Display<T>(System.Collections.Generic.IEnumerable<T> values)
+{
+ var i = 0;
+ using (var enumerator = values.GetEnumerator())
+ {
+  while ((++i) <= 10 && enumerator.MoveNext())
+  {  
+   if (enumerator.Current != null)
+   {
+    System.Console.Write(enumerator.Current.ToString());
+   }
+  }
+ }
+}

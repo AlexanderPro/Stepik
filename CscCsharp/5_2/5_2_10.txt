@@ -1,0 +1,6 @@
+Вопрос:
+Какой тип у переменной «callback»?
+var callback = (Func<int>) delegate { return 0; };
+
+Ответ:
+Func<int>

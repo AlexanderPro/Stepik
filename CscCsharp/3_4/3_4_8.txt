@@ -1,0 +1,46 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+struct Pointer
+{
+	private bool end;
+	
+	public bool MoveNext()
+	{
+		System.Console.Write("was.");
+		end = !end;
+		return end;
+	}
+	
+	public string Current
+	{
+		get
+		{
+			return "say.just.words.";
+		}
+	}
+}
+
+struct Container
+{
+	public Pointer GetEnumerator()
+	{
+		System.Console.Write("she.");
+		return new Pointer();
+	}
+}
+
+public static class Program
+{
+	public static void Main()
+	{
+		foreach (var message in new Container())
+		{
+			System.Console.Write(message);
+		}
+	}
+}
+
+Ответ:
+she.was.say.just.words.was.

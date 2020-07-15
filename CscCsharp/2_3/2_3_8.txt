@@ -1,0 +1,15 @@
+Вопрос:
+Хоть мы явно этот момент не проговаривали, попробуйте догадаться, что выведет в консоль этот код?
+
+using System;
+
+static class EntryPoint
+{
+    static void Main()
+    {
+        Console.Write(null is object);
+    }
+}
+
+Ответ:
+False

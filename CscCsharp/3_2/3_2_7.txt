@@ -1,0 +1,26 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+internal sealed class Scope : System.IDisposable
+{
+	public void Dispose()
+	{
+		System.Console.Write("dispose");
+	}
+}
+	
+public static class Program
+{
+	public static void Main()
+	{
+		{
+			Scope scope = new Scope();
+		}
+		System.GC.Collect();
+		System.GC.WaitForPendingFinalizers();
+	}
+}
+
+Ответ:
+Ничего не выведет.

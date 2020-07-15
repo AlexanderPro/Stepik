@@ -1,0 +1,25 @@
+Вопрос:
+
+А этот код выведет что-нибудь?
+
+try
+{
+    //Do some work here
+    //throw new ArgumentException("Fail!!!");
+    return;
+}
+catch (ArgumentException e)
+{
+    Console.Write("ArgumentException ");
+}
+catch (Exception e)
+{
+    Console.Write("Exception ");
+}
+finally
+{
+    Console.Write("finally ");
+}
+
+Ответ:
+Выведет finally

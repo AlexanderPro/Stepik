@@ -1,0 +1,44 @@
+Вопрос:
+
+А в этом случае что будет выведено после запуска функции Main?
+
+class A 
+{ 
+public virtual void Foo() 
+{ 
+    Console.WriteLine("A method"); 
+} 
+}
+
+class B : A 
+{ 
+public new virtual void Foo() 
+{ 
+    Console.WriteLine("B method"); 
+} 
+} 
+
+class C : B 
+{ 
+public override void Foo() 
+{ 
+    Console.WriteLine("C method"); 
+} 
+} 
+
+class D : C 
+{ 
+public new void Foo() 
+{ 
+    Console.WriteLine("D method"); 
+} 
+}
+
+static void Main(string[] args) 
+{ 
+    D d = new D(); 
+    (d as B).Foo(); 
+}
+
+Ответ:
+C method

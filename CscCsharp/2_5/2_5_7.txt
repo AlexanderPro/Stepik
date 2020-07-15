@@ -1,0 +1,17 @@
+Вопрос:
+Что выведет в консоль этот код?
+
+public static class Program
+{
+	internal delegate short Action();
+	
+	private static Action bar;
+	
+	public static void Main()
+	{		
+		System.Console.Write(bar());
+	}
+}
+
+Ответ:
+Будет выброшено исключение.

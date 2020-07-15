@@ -1,0 +1,25 @@
+Вопрос:
+Что выведет в консоль этот код?
+using System;
+
+struct Monster
+{
+    private readonly int power;
+
+    internal int GetDamage(int armor)
+    {
+        return armor / power;
+    }
+}
+    
+static class EntryPoint
+{
+    static void Main()
+    {
+        Monster goblin = new Monster();
+        Console.Write(goblin.GetDamage(0));           
+    }
+}
+
+Ответ:
+Будет выброшено исключение.

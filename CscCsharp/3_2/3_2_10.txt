@@ -1,0 +1,23 @@
+Вопрос:
+
+А как поправить код, что б файл удалялся вне зависимости от того, когда будет запущен сборщик мусора?
+Напоминалка, код был таким:
+
+public static void DoOddStuff()
+{	
+	const string fileName = "tmp.tmp";
+ 
+	byte[] dataToWrite = new byte[] { 0, 1, 0, 1 };
+ 
+	FileStream file = new FileStream(fileName, FileMode.Create);
+ 
+	file.Write(dataToWrite, 0, dataToWrite.Length);
+ 
+	File.Delete(fileName);
+}
+
+Ответ:
+using(FileStream file = new FileStream(fileName, FileMode.Create))
+{
+  file.Write(dataToWrite, 0, dataToWrite.Length);
+}

@@ -1,0 +1,34 @@
+Вопрос:
+
+Поупражняемся в написании LINQ expressions. Вам сверху снизошёл массив stars с объектами типа RockStar:
+internal sealed class RockStar
+{
+    internal string Name { get; set; }
+    internal string CurrentBand { get; set; }
+    internal string Role { get; set; }
+    internal long SalaryPerGig { get; set; }
+}
+
+Напишите выражение, выбирающее из массива имена рок-звёзд в порядке убывания их гонорара за концерт.
+
+Подсказки:
+
+За сортировку в LINQ отвечает конструкция orderby.
+Содержимое массива stars:
+var stars = new[]
+{
+new RockStar { Name = "Ian Gillan",  CurrentBand = "Deep Purple", SalaryPerGig = 700, Role = "Vocal" }, 
+new RockStar { Name = "Angus Young",  CurrentBand = "AC/DC", SalaryPerGig = 900, Role = "Guitar" },
+new RockStar { Name = "Roger Glover",  CurrentBand = "Deep Purple", SalaryPerGig = 400, Role = "Bass" },
+new RockStar { Name = "David Coverdale",  CurrentBand = "Whitesnake", SalaryPerGig = 950, Role = "Vocal" },
+new RockStar { Name = "Rick Allen",  CurrentBand = "Def Leppard", SalaryPerGig = 800, Role = "Drums" },
+new RockStar { Name = "Steven J. Morse",  CurrentBand = "Deep Purple", SalaryPerGig = 600, Role = "Guitar" },
+new RockStar { Name = "Don Airey",  CurrentBand = "Deep Purple", SalaryPerGig = 600, Role = "Keyboards" },
+};
+P. S. Все персонажи являются вымышленными и любое совпадение с реально живущими или когда-либо жившими людьми и их зарплатами случайно.
+
+Sample Output:
+David Coverdale, Angus Young, Rick Allen, Ian Gillan, Steven Morse, Don Airey, Roger Glover
+
+Ответ:
+from star in stars orderby star.SalaryPerGig descending select star.Name

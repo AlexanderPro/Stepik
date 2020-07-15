@@ -1,0 +1,34 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+using System;
+
+static class EntryPoint
+{
+    private static byte Cast(int value)
+    {
+        byte result;
+        
+        unchecked
+        {
+            result = (byte) value;
+        }
+
+        return result;
+    }
+    
+    static void Main()
+    {
+        int value = 256;
+        
+        checked
+        {
+            var low = Cast(value);
+            Console.Write(low);
+        }
+    }
+}
+
+Ответ:
+0

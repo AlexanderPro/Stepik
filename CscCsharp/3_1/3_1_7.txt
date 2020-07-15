@@ -1,0 +1,32 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+public static class Program
+{
+	public static void Main()
+	{
+		try
+		{
+			int? value = null;
+			object reference = value;
+			int? twin = (int?) reference;
+			
+			value.GetHashCode();
+			System.Console.Write("step 1");
+			
+			twin.GetHashCode();
+			System.Console.Write("; step 2");
+		
+			reference.GetHashCode();
+			System.Console.Write("; step 3");
+		}
+		catch (System.Exception)
+		{
+			System.Console.Write("; exception");
+		}
+	}
+}
+
+Ответ:
+step 1; step 2; exception

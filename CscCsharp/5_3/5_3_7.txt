@@ -1,0 +1,23 @@
+Вопрос:
+Написать функцию «Concat», конкатенирующую две последовательности в одну новую, где сначала идут элементы первой, а потом — второй последовательности.
+Например, конкатенация двух последовательностей символов 's', 't', 'e', 'p', 'i', 'k' и 's', 'i', 't', 'e' должна давать на выходе одну: 's', 't', 'e', 'p', 'i', 'k', 's', 'i', 't', 'e'.
+
+Sample Input:
+1,2,3,4,17 и 5,19,32; 'n','o','v','o' и 's','i','b','i','r','s','k'; 3.0,1.0,4.0,1.0 и 5.0,9.0,2.0
+
+Sample Output:
+1,2,3,4,17,5,19,32; n,o,v,o,s,i,b,i,r,s,k; 3,1,4,1,5,9,2;
+
+Ответ:
+public static IEnumerable<T> Concat<T>(IEnumerable<T> first, IEnumerable<T> second)
+{
+ foreach (var item in first)
+ {
+  yield return item;
+ }
+
+ foreach (var item in second)
+ {
+  yield return item;
+ }
+}

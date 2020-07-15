@@ -1,0 +1,16 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+public static class Program
+{
+	public static void Main()
+	{
+		dynamic value = "hello";
+		var sine = System.Math.Sin(value);
+		System.Console.Write(sine);
+	}
+}
+
+Ответ:
+Будет выброшено исключение.

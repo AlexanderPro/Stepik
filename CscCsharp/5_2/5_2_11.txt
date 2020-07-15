@@ -1,0 +1,14 @@
+Вопрос:
+Объявите переменную «cSharpPeople» — массив объектов анонимного типа, содержащего одно свойство «Name». Количество элементов в массиве — четыре. Значения имён для них: «Anders Hejlsberg», «Eric Lippert», «Luca Cardelli», «Erik Meijer».
+
+Sample Output:
+Anders Hejlsberg Eric Lippert Luca Cardelli Erik Meijer
+
+Ответ:
+var cSharpPeople = new[]
+{
+ new {Name = "Anders Hejlsberg"}, 
+ new {Name = "Eric Lippert"}, 
+ new {Name = "Luca Cardelli"},
+ new {Name = "Erik Meijer"}
+};

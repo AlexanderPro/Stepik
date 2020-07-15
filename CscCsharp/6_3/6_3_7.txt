@@ -1,0 +1,28 @@
+Вопрос:
+
+Хоть приведённый ниже код и является примером того, как не надо программировать, давайте разберёмся, что он выведет в консоль?
+
+using System;
+					
+public static class Program
+{
+	private static void WriteValues(int a, int b, int c, int d)
+	{
+		Console.Write(a);
+		Console.Write(' ');
+		Console.Write(b);
+		Console.Write(' ');
+		Console.Write(c);
+		Console.Write(' ');
+		Console.Write(d);
+	}
+	
+	public static void Main()
+	{
+		var source = 13;
+		WriteValues(c: source++, b: ++source, a: source, d: source++ + 1);
+	}
+}
+
+Ответ:
+15 15 13 16

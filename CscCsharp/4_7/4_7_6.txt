@@ -1,0 +1,30 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+using System;
+using System.Threading.Tasks;
+
+static class Program
+{
+    static async Task Fail()
+    {
+        throw new InvalidOperationException();
+    }
+
+    static void Main()
+    {
+        try
+        {
+            Fail().Wait();
+            Console.Out.Write("_failed");
+        }
+        catch (InvalidOperationException)
+        {
+            Console.Out.Write("_caught");
+        }
+    }
+}
+
+Ответ:
+Будет выброшено исключение.

@@ -1,0 +1,31 @@
+Вопрос:
+
+Хоть мы явно этот момент не проговаривали, попробуйте догадаться, что выведет в консоль этот код?
+
+using System;
+
+public static class Program
+{
+    sealed class Track
+    {
+        internal double Length { get; set; }
+    }
+    
+    private static double Length(this Track self)
+    {
+        if (null == self)
+        {
+            return 0;
+        }
+
+        return self.Length + 1;
+    }
+
+    public static void Main()
+    {
+        Console.Write(new Track{Length = 2.71828}.Length);
+    }
+}
+
+Ответ:
+2.71828

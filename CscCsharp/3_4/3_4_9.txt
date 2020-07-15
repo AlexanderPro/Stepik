@@ -1,0 +1,51 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+struct Scope
+{
+	private bool end;
+	
+	public bool MoveNext()
+	{
+		System.Console.Write("2.");
+		end = !end;
+		return end;
+	}
+	
+	public string Current
+	{
+		get
+		{
+			return "1.";
+		}
+	}
+	
+	public void Dispose()
+	{
+		System.Console.Write("3.");
+	}
+}
+
+struct Allocator
+{
+	public Scope GetEnumerator()
+	{
+		System.Console.Write("0.");
+		return new Scope();
+	}
+}
+
+public static class Program
+{
+	public static void Main()
+	{
+		foreach (var element in new Allocator())
+		{
+			System.Console.Write(element);
+		}
+	}
+}
+
+Ответ:
+0.2.1.2.

@@ -1,0 +1,15 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+public static class Program
+{
+	public static void Main()
+	{
+		int? value = ((null + 1) * (null / null)) % 2 - 5;
+		System.Console.Write(value.HasValue ? value.ToString() : "null");
+	}
+}
+
+Ответ:
+null

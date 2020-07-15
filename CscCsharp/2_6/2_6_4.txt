@@ -1,0 +1,28 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+sealed class Button
+{
+	internal delegate void Action();
+	
+	internal event Action OnClick;
+	
+	internal void FireClick()
+	{
+		OnClick();
+		System.Console.Write("clicked");
+	}
+}
+
+public static class Program
+{
+	public static void Main()
+	{
+		Button ok = new Button();
+		ok.FireClick();
+	}
+}
+
+Ответ:
+Будет выброшено исключение.

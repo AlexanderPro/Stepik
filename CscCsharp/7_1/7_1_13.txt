@@ -1,0 +1,18 @@
+Вопрос:
+
+Что выведет следующий код?
+
+var original = new [] {10, 20, 30};
+
+var transformed = original.Select(i => i / 10);
+
+original[2] = 40;
+
+foreach (var i in transformed)
+{
+    Console.WriteLine(i);
+}
+
+
+Ответ:
+1, 2, 4

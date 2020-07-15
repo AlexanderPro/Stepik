@@ -1,0 +1,66 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+using System;
+
+struct Gate : System.Collections.IEnumerator, IDisposable
+{
+	private bool end;
+	
+	public void Reset()
+	{
+		end = false;
+	}
+	
+	public bool MoveNext()
+	{
+		Console.Write("2.");
+		end = !end;
+		return end;
+	}
+	
+	public object Current
+	{
+		get
+		{
+			return "1.";
+		}
+	}
+	
+	public void Dispose()
+	{
+		Console.Write("3.");
+	}
+}
+
+struct Guard
+{
+	public Gate GetEnumerator()
+	{
+		Console.Write("0.");
+		return new Gate();
+	}
+}
+
+public static class Program
+{
+	public static void Main()
+	{
+		try
+		{
+			foreach (var access in new Guard())
+			{
+				Console.Write(access);
+				throw new Exception();
+			}
+		}
+		catch (Exception)
+		{
+			Console.Write("4.");
+		}
+	}
+}
+
+Ответ:
+0.2.1.3.4.

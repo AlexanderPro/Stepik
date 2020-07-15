@@ -1,0 +1,33 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+using System;
+using System.Linq.Expressions;
+
+public static class Program
+{
+    public static void Main()
+    {
+        var result = Expression.Lambda<Func<double>>
+        (
+            Expression.Add
+            (
+                Expression.Add
+                (
+                    Expression.Multiply(Expression.Constant(6.0), Expression.Constant(10.0))
+                    ,
+                    Expression.Multiply(Expression.Constant(3.0), Expression.Constant(100.0))
+                )
+                ,
+                Expression.Constant(5.0)
+            )
+        )
+        .Compile()();
+
+        Console.Write(result);
+    }
+}
+
+Ответ:
+365

@@ -1,0 +1,5 @@
+Вопрос:
+Какой код может описывать это AST?
+
+Ответ:
+var counter = 0; foreach (var file in CurrentDirectoryFiles()) { Console.WriteLine((counter++) + ") " + file.Name); }

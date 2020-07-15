@@ -1,0 +1,48 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+using System;
+
+struct Cat
+{
+    private int weight;
+
+    public Cat(int weight)
+    {
+        this.weight = weight;
+    }
+
+    internal void Eat()
+    {
+        weight++;
+    }
+
+    internal int GetWeight()
+    {
+        return weight;
+    }
+}
+
+sealed class House
+{
+    readonly Cat pet = new Cat(1);
+
+    internal void Advance()
+    {
+        pet.Eat();
+        Console.Write(pet.GetWeight());
+    }
+}
+
+static class EntryPoint
+{
+    static void Main()
+    {
+        House house = new House();
+        house.Advance();
+    }
+}
+
+Ответ:
+1

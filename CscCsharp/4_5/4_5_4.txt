@@ -1,0 +1,16 @@
+Вопрос:
+Напишите функцию,  которая асинхронно читает байты из одного потока, интерпретируя их, как ASCII-символы, и асинхронно записывает во второй, сохраняя порядок, лишь те, что находятся в интервале от 'a' до 'z'. То есть в выходной поток должны писаться лишь байты, являющиеся кодами строчных букв английского алфавита в кодировке ASCII.
+
+Ответ:
+static async Task TransferSymbols(Stream source, Stream destination)
+{
+ using (var ms = new MemoryStream())
+ {
+  await source.CopyToAsync(ms);
+  var sourceString = System.Text.Encoding.ASCII.GetString(ms.ToArray());
+  var destinationString = System.Text.RegularExpressions.Regex.Replace(sourceString, "[^a-z]", "");
+  var destinationArray = System.Text.Encoding.ASCII.GetBytes(destinationString);
+  await destination.WriteAsync(destinationArray, 0, destinationArray.Length);
+  destination.Position = 0;
+ }
+}

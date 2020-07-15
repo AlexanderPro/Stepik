@@ -1,0 +1,47 @@
+Вопрос:
+Что выведет в консоль этот код?
+
+using System;
+
+struct Avatar
+{
+    private int level;
+
+    internal void LevelUp()
+    {
+        level++;
+    }
+
+    internal int GetLevel()
+    {
+        return level;
+    }
+}
+
+sealed class Account
+{
+    private readonly Avatar hologram;
+
+    static void TheMethod(ref Avatar target)
+    {
+        target.LevelUp();
+    }
+    
+    public void ExecuteCheatCode()
+    {
+        TheMethod(ref hologram);
+        Console.Write(hologram.GetLevel());
+    }
+}
+    
+static class EntryPoint
+{
+    static void Main()
+    {
+        Account account = new Account();
+        account.ExecuteCheatCode();
+    }
+}
+
+Ответ:
+Код не скомпилируется.

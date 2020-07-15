@@ -1,0 +1,8 @@
+Вопрос:
+Напишите метод-расширение CompareWithEpsilon для типа double с тремя параметрами: this, double-число с которым сравниваем, epsilon-погрешность типа double. Функция должна возвращать true, если для параметров (назовём их self, reference и epsilon) выполняется |self - reference| \leq epsilon∣self−reference∣≤epsilon, и false в противном случае.
+
+Ответ:
+public static bool CompareWithEpsilon(this double self, double reference, double epsilon)
+{
+ return Math.Abs(self - reference) <= epsilon;
+}

@@ -1,0 +1,18 @@
+Вопрос:
+Реализуйте свойство HugeNumber типа long так, что б помимо функционала сохранения и возврата значения, на запись в него в консоль выводилось «set! » (без кавычек, с пробелом на конце), а на чтение — «get! » (тоже без кавычек, с пробелом на конце). Для вывода в консоль используйте System.Console.Write.
+
+Ответ:
+private long _hugeNumber;
+public long HugeNumber
+{
+ get
+ {
+  System.Console.Write("get! ");
+  return _hugeNumber;
+ }
+ set
+ {
+  System.Console.Write("set! ");
+  _hugeNumber = value;
+ }
+}

@@ -1,0 +1,19 @@
+Вопрос:
+
+Представим, что мы работаем над крупным проектом: программирует много людей, приложение исполняется в несколько нитей. Нам надо отрецензировать код стажёра:
+
+public static void DoOddStuff()
+{	
+	const string fileName = "tmp.tmp";
+ 
+	byte[] dataToWrite = new byte[] { 0, 1, 0, 1 };
+ 
+	FileStream file = new FileStream(fileName, FileMode.Create);
+ 
+	file.Write(dataToWrite, 0, dataToWrite.Length);
+ 
+	File.Delete(fileName);
+}
+
+Ответ:
+№3. Всё из пункта №2, и ещё File.Delete будет постоянно бросать исключение, так как файл может быть ещё открытым.

@@ -1,0 +1,30 @@
+Вопрос:
+
+Снова пример не самого удачного дизайна (и имена переменных, кроме всего прочего, тут по-прежнему плохи), но для закрепления материала он подходит. Что выведет в консоль этот код?
+
+using System;
+					
+public static class Program
+{
+	private static void WriteValues(int a, int b, int c = 0, int d = 1, int e = 2)
+	{
+		Console.Write(a);
+		Console.Write(' ');
+		Console.Write(b);
+		Console.Write(' ');
+		Console.Write(c);
+		Console.Write(' ');
+		Console.Write(d);
+		Console.Write(' ');
+		Console.Write(e);
+	}
+	
+	public static void Main()
+	{
+		var source = 13;
+		WriteValues(++source, source, d: source++ + 1);
+	}
+}
+
+Ответ:
+14 14 0 15 2

@@ -1,0 +1,10 @@
+Вопрос:
+
+Какие из этих value-типов стандартной библиотеки не являются blittable? Может быть выбрано несколько пунктов.
+
+Ответ:
+
+System.Bool
+System.Decimal
+System.DateTime
+System.Char

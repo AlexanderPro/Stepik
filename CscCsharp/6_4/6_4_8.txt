@@ -1,0 +1,17 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+public static class Program
+{
+	public static void Main()
+	{
+		dynamic value = (object) "hello";
+		var message = value;
+		var sum = message + ' ' + value;
+		System.Console.Write(sum);
+	}
+}
+
+Ответ:
+hello hello

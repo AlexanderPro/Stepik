@@ -1,0 +1,23 @@
+Вопрос:
+К чему из нижеперечисленного может привести выполнение следующего кода? Может быть выбрано несколько пунктов.
+
+/*
+Где-то тут, выше, объявлен класс SomeClass.
+*/
+
+public static class Program
+{
+	public static void Main()
+	{
+		SomeClass instance = new SomeClass();
+		instance.Field = "this is string";
+		System.Console.Write(instance.Field);
+	}
+}
+
+Ответ:
+Процесс остановится при выполнении третьей строки метода Main.
+Будет выброшено исключение.
+Процесс остановится при выполнении второй строки метода Main.
+В консоль будет выведено «this is not the string you wanted to see».
+В консоль будет выведено «this is string».

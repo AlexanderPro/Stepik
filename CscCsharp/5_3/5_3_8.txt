@@ -1,0 +1,18 @@
+Вопрос:
+Написать функцию «Zip», порождающую последовательность «пар» элементов из двух входных последовательностей («пара» склеивается из элементов, имеющих одинаковый порядковый номер в своих последовательностях).
+Например, если в качестве «пары» брать произведение чисел, то из двух последовательностей натуральных чисел Zip выдаст последовательность их квадратов.
+
+Sample Input:
+3.0,7.0,1.0; и 1.0,2.0,4.0;
+
+Sample Output:
+finally 4,9,5;
+
+Ответ:
+public static IEnumerable<TResult> Zip<TL, TR, TResult>(IEnumerable<TL> left, IEnumerable<TR> right, Func<TL, TR, TResult> glue)
+{
+ using (IEnumerator<TL> e1 = left.GetEnumerator())
+ using (IEnumerator<TR> e2 = right.GetEnumerator())
+  while (e1.MoveNext() && e2.MoveNext())
+   yield return glue(e1.Current, e2.Current);
+}

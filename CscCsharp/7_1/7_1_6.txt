@@ -1,0 +1,12 @@
+Вопрос:
+
+Что выведет следующий код?
+
+string first = "oh";
+string second = first;
+second += "ah";
+Console.Write(first);
+
+Ответ:
+
+oh

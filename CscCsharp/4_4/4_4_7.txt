@@ -1,0 +1,5 @@
+Вопрос:
+Какими функциями можно организовать ожидание и пробуждение нити по событию в .NET (аналоги методов wait/notify из Java или conditional variables из библиотеки POSIX Threads)?
+
+Ответ:
+Monitor.Wait / Monitor.Pulse (Monitor.PulseAll)

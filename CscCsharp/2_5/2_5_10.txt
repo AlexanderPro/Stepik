@@ -1,0 +1,36 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+public static class Program
+{
+	internal delegate short Action();
+	
+	private static Action Bar()
+	{
+		short foo = 0;
+		
+		Action code = delegate
+		{
+			foo++;
+			
+			return foo;
+		};
+		
+		return code;
+	}
+	
+	public static void Main()
+	{		
+		Action zig = Bar();
+		Action zag = Bar();
+		
+		short foo = zig();
+		foo = zag();
+		
+		System.Console.Write(foo);
+	}
+}
+
+Ответ:
+1

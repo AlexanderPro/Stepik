@@ -1,0 +1,29 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+public static class Program
+{
+	private static System.Collections.Generic.IEnumerable<bool> Temporal()
+	{
+		try
+		{
+			yield return false;
+			yield return true;
+		}
+		finally
+		{
+			System.Console.Write("this is it!");
+		}
+	}
+	
+	public static void Main()
+	{
+		using (var modal = Temporal())
+		{
+		}
+	}
+}
+
+Ответ:
+Код не скомпилируется.

@@ -1,0 +1,29 @@
+Вопрос:
+Что выведет в консоль этот код?
+
+using System;
+
+sealed partial class EntryPoint
+{
+    private static void Step2()
+    {
+        Console.Write("2");
+    }
+}
+
+partial class EntryPoint
+{
+    private static void Step1()
+    {
+        Console.Write("1");
+    }
+
+    static void Main()
+    {
+        Step1();
+        Step2();
+    }
+}
+
+Ответ:
+12

@@ -1,0 +1,30 @@
+Вопрос:
+Какой тип у переменной «android»?
+
+using System;
+
+public static class Program
+{
+    sealed class Droid
+    {
+        internal string CodeName { get; }
+
+        internal Droid(string codeName)
+        {
+            CodeName = codeName;
+        }
+    }
+
+    public static void Main()
+    {
+        var droids = new[] {new Droid("Petit Four"), new Droid("Cupcake"), new Droid("Donut"),};
+
+        foreach (var android in droids)
+        {
+            Console.WriteLine(android.CodeName);
+        }
+    }
+}
+
+Ответ:
+Droid

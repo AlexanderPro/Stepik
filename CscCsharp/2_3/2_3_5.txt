@@ -1,0 +1,19 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+using System;
+
+static class EntryPoint
+{
+    static void Main()
+    {
+        byte value = 255;
+        value++;
+        Console.Write(value);
+    }
+}
+
+Ответ:
+
+В зависимости от настроек компилятора: либо 0, либо будет выброшено исключение.

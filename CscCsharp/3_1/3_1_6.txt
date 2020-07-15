@@ -1,0 +1,29 @@
+Вопрос:
+
+Что выведет в консоль этот код?
+
+public static class Program
+{
+	public static void Main()
+	{
+		System.Console.Write(null == 1);
+		
+		System.Console.Write(' ');
+		
+		int? value = null;
+		System.Console.Write(null == value);
+		
+		System.Console.Write(' ');
+		
+		System.Console.Write(null ?? "String");
+		
+		System.Console.Write(' ');
+		
+		int? empty = null;
+		int? full = 1;
+		System.Console.Write(empty ?? full);
+	}
+}
+
+Ответ:
+False True String 1

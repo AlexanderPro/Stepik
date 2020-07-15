@@ -1,0 +1,16 @@
+Вопрос:
+
+Выберите верные высказывания о следующих фрагментах кода (у объекта типа object действительно нет такого метода)
+
+//first
+var myobject = new object();
+myobject.ThisMethodDoesnotExistInObject();
+//second
+dynamic myobject = new object();
+myobject.ThisMethodDoesnotExistInObject();
+
+Ответ:
+
+Первый не скомпилируется
+Второй приведет к исключению в момент исполнения
+Второй скомпилируется без ошибок

@@ -1,0 +1,29 @@
+Вопрос:
+
+Что выведет следующий код?
+
+try
+{
+    //Do some work here
+    throw new NullReferenceException("Fail!!!");
+    return;
+}
+catch (ArgumentException e)
+{
+    Console.Write("ArgumentException ");
+}
+catch (NullReferenceException e)
+{
+    Console.Write("NullReferenceException ");
+}
+catch (Exception e)
+{
+    Console.Write("Exception ");
+}
+finally
+{
+    Console.Write("finally ");
+}
+
+Ответ:
+NullReferenceException finally

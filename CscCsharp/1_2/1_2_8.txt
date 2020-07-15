@@ -1,0 +1,64 @@
+Вопрос:
+Какие перечисленные ниже объекты являются корнями сборки мусора (англ. gc roots) в момент нахождения потока исполнения внутри метода Headphones.Render на строке System.Console.Out.WriteLine(message)? 
+
+sealed class Headphones
+{
+    private string _uid;
+
+    internal Headphones(string uid)
+    {
+        _uid = uid;
+    }
+
+    internal void Render()
+    {
+        string message = "text";
+        System.Console.Out.WriteLine(message); // поток исполнения тут
+    }
+}
+
+sealed class Speakers
+{
+    private string _uid;
+
+    internal Speakers(string uid)
+    {
+        _uid = uid;
+    }
+
+    internal void Render()
+    {
+    }
+}
+
+static class Program
+{
+    private static readonly string KeyCode = "FF00DD"; 
+            
+    static void Main(string[] cliArguments)
+    {
+        var headphones = new Headphones(KeyCode);
+
+        {
+            var speakers = new Speakers(KeyCode);
+
+            if (1 < cliArguments.Length)
+            {
+                object system = new object();
+
+                System.Console.Out.WriteLine(KeyCode);
+                speakers.Render();
+            }
+        }
+
+        headphones.Render();
+        
+        System.Console.Out.WriteLine("done");
+    }
+}
+
+Ответ:
+KeyCode
+message
+headphones
+cliArguments

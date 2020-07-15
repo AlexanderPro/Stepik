@@ -1,0 +1,21 @@
+Вопрос:
+Написать функцию «SelectMany», порождающую на каждый элемент входной последовательности новую и объединяющую их в одну на выходе.
+Например, возьмём последовательность чисел: 7, 13, 2. И пусть у нас есть функция, для данного числа возвращающая тройку: само число, его квадрат и произведение на два. Тогда SelectMany из последовательности выше и означенной функции породит новую последовательность: 7, 49, 14, 13, 169, 26, 2, 4, 4.
+
+Sample Input:
+7.0,13.0,2.0; 1,2,3,4; 1,2; 'a','b','c','x','y';
+
+Sample Output:
+7,49,14,13,169,26,2,4,4; 1,1,1,2,2,2,3,3,3,4,4,4; 2,4; a,b,b,c,c,d,x,y,y,z;
+
+Ответ:
+public static IEnumerable<TP> SelectMany<TS, TP>(this IEnumerable<TS> source, Func<TS, IEnumerable<TP>> produce)
+{
+ foreach (TS element in source) 
+ {
+  foreach (TP subElement in produce(element))
+  {
+   yield return subElement;
+  }
+ }
+}

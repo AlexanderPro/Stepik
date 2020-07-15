@@ -1,0 +1,28 @@
+Вопрос:
+Что выведет в консоль этот код?
+
+internal sealed class Truck
+{
+	internal long EngineNumber { get; set; }
+}
+
+public class Program
+{
+	private static void Increment(ref long value)
+	{
+		value++;
+	}
+	
+	public static void Main()
+	{
+		Truck car = new Truck();
+		long number = 1;
+		car.EngineNumber = number;
+		Increment(ref number);
+		Increment(ref car.EngineNumber);
+		System.Console.Write(car.EngineNumber);
+	}
+}
+
+Ответ:
+Код не скомпилируется.
