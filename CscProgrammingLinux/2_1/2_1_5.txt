@@ -1,0 +1,9 @@
+Вопрос:
+Отметьте функции, которые на Ваш взгляд, относятся к системному интерфейсу доступа к файлам в Linux
+
+Ответ:
+- ssize_t writ(int fd, const void *buf, size_t count)
+- int sscanf(const char *str, const char *format, ...)
++ int open(const char *pathname, int flags, mode_t mode)
++ int creat(const char *pathname, mode_t mode)
+- BOOL WriteFile(HANDLE hFile, LPCVOID lpBuffer, DWORD nNumberOfBytesToWrite)

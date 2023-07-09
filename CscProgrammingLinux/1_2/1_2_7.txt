@@ -1,0 +1,8 @@
+Вопрос:
+Найдите соответствие между прототипами функций С++ и их закодированными именами
+
+Ответ:
+_Z8getValuei      getValue(int)
+_Z8getValuePFviE  getValue(void (*)(int))
+_Z8getValuePvi    getValue(void*, int)
+_Z8getValuev      getValue()

@@ -1,0 +1,21 @@
+Вопрос:
+Вы пишете программу, определяющую список родителей для некоторого процесса с идентификатором pid. Схематично код основной функции приведен в следующем листинге.
+
+void print_process_parents(pid_t pid) {
+
+  pid_t current = pid;
+
+ while (current != 1 ) {
+  
+  printf("%d\n",current);
+  current = get_parent_pid(current)
+
+ }
+
+ printf("%d (init) \n",current);
+}
+
+Что на ваш взгляд должна делать функция get_parent_pid? (Считая, что вместо CURRENT, используется реальной числовое значение current).
+
+Ответ:
+Прочитать из файла /proc/CURRENT/stat значение четвертого по счету поля
