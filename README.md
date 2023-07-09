@@ -1,4 +1,4 @@
-# Solutions for courses at [stepik.org](https://stepik.org)
+# Решения для курсов на платформе [stepik.org](https://stepik.org)
 
 C++
 ------------------
