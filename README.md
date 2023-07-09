@@ -12,7 +12,7 @@ C#
 
 Java/JavaScript
 ------------------
-* **[Введение в JavaScript](https://stepik.org/course/2223/info)**
+* **[JavaScript для начинающих](https://stepik.org/course/2223/info)**
 * **[Java. Базовый курс](https://stepik.org/course/187/info)**
 
 Linux
