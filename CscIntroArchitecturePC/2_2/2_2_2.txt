@@ -5,3 +5,4 @@
 esi
 ebx
 eax
+ebp

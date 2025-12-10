@@ -8,7 +8,7 @@
 
 func()
 {
- char *d = new char[798];
+    char *d = new char[798];
 }
 
 Ответ:
